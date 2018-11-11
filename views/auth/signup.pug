@@ -1,0 +1,61 @@
+extends ../layouts/app
+
+block content
+	form(method='post', action='/auth/signup').form-auth
+		.text-center.mb-4
+			img(src='/img/bootstrap-solid.svg', width='72', height='72').mb-3
+			h1.h3.mb-3.font-weight-normal= title
+		if message.length > 0
+			.alert.alert-danger= message
+		input(type='hidden', name='_csrf', value=csrfToken)
+		h3.h5.font-weight-normal About you
+		hr.mt-1.mb-4
+		.form-label-group
+			input(type='', name='genre', placeholder='Genre', required)#Genre.form-control
+			label(for='Genre') Genre
+		.form-label-group
+			input(type='text', name='firstName', placeholder='First name', required)#firstName.form-control
+			label(for='firstName') First name
+		.form-label-group
+			input(type='text', name='lastName', placeholder='Last name', required)#lastName.form-control
+			label(for='lastName') Last name
+		.form-label-group
+			input(type='', name='date', placeholder='Date', required)#Date.form-control
+			label(for='Date') Date
+		.form-label-group
+			input(type='number', name='age', placeholder='Age', required)#Age.form-control
+			label(for='Age') Age
+		h3.h5.font-weight-normal Contact
+		hr.mt-1.mb-4
+		.form-label-group
+			input(type='tel', name='telephone', placeholder='Telephone', required)#Telephone.form-control
+			label(for='Telephone') Telephone
+		.form-label-group
+			input(type='tel', name='cell', placeholder='Cell', required)#Cell.form-control
+			label(for='Cell') Cell
+		h3.h5.font-weight-normal Location
+		hr.mt-1.mb-4
+		.form-label-group
+			input(type='text', name='street', placeholder='Street', required)#Street.form-control
+			label(for='Street') Street
+		.form-label-group
+			input(type='', name='city', placeholder='City', required)#City.form-control
+			label(for='City') City
+		.form-label-group
+			input(type='', name='state', placeholder='State', required)#State.form-control
+			label(for='State') State
+		.form-label-group
+			input(type='', name='country', placeholder='Country', required)#Country.form-control
+			label(for='Country') Country
+		h3.h5.font-weight-normal Login
+		hr.mt-1.mb4
+		.form-label-group
+			input(type='email', name='email', placeholder='Email', required)#Email.form-control
+			label(for='Email') Email
+		.form-label-group
+			input(type='text', name='username', placeholder='Username', required)#Username.form-control
+			label(for='Username') Username
+		.form-label-group
+			input(type='password', name='password', placeholder='Password', required)#Password.form-control
+			label(for='Password') Password
+		button(type='submit').btn.btn-block.btn-primary.mt-5 Sign up

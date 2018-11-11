@@ -1,0 +1,31 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "compression": "^1.7.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "~2.0.1",
+    "csurf": "^1.9.0",
+    "express": "~4.16.0",
+    "express-session": "~1.15.6",
+    "helmet": "^3.15.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "~5.0.0",
+    "morgan": "~1.9.0",
+    "node-env-file": "0.1.8",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "~2.0.0-alpha8",
+    "serve-static": "^1.13.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
