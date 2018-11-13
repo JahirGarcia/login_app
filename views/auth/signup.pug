@@ -11,20 +11,29 @@ block content
 		h3.h5.font-weight-normal About you
 		hr.mt-1.mb-4
 		.form-label-group
-			input(type='', name='genre', placeholder='Genre', required)#Genre.form-control
-			label(for='Genre') Genre
-		.form-label-group
 			input(type='text', name='firstName', placeholder='First name', required)#firstName.form-control
 			label(for='firstName') First name
 		.form-label-group
 			input(type='text', name='lastName', placeholder='Last name', required)#lastName.form-control
 			label(for='lastName') Last name
-		.form-label-group
-			input(type='', name='date', placeholder='Date', required)#Date.form-control
-			label(for='Date') Date
-		.form-label-group
-			input(type='number', name='age', placeholder='Age', required)#Age.form-control
-			label(for='Age') Age
+		.form-group
+			.input-group
+				input(type='date', name='date', required)#Date.form-control
+				.input-group-append
+					label(for='Date').input-group-text: i.fas.fa-calendar
+		.form-group
+			select(name='age', required)#Age.form-control
+				option(value='-1') Select your age
+				- i = 0
+				while i < 99
+					option(value=i++)= i++
+		.form-group
+			.custom-control.custom-radio.custom-control-inline
+				input(type='radio', name='genre', value='male', required)#GenreMale.custom-control-input
+				label(for='GenreMale').custom-control-label Male
+			.custom-control.custom-radio.custom-control-inline
+				input(type='radio', name='genre', value='female', required)#GenreFemale.custom-control-input
+				label(for='GenreFemale').custom-control-label Female
 		h3.h5.font-weight-normal Contact
 		hr.mt-1.mb-4
 		.form-label-group
@@ -35,18 +44,20 @@ block content
 			label(for='Cell') Cell
 		h3.h5.font-weight-normal Location
 		hr.mt-1.mb-4
+		.form-group
+			select(name='country', required)#Country.form-control
+				option(value='-1') Select your country
+				each country in countries
+					option(value=country.name)= country.name
+		.form-label-group
+			input(type='text', name='city', placeholder='City', required)#City.form-control
+			label(for='City') City
+		.form-label-group
+			input(type='text', name='state', placeholder='State', required)#State.form-control
+			label(for='State') State
 		.form-label-group
 			input(type='text', name='street', placeholder='Street', required)#Street.form-control
 			label(for='Street') Street
-		.form-label-group
-			input(type='', name='city', placeholder='City', required)#City.form-control
-			label(for='City') City
-		.form-label-group
-			input(type='', name='state', placeholder='State', required)#State.form-control
-			label(for='State') State
-		.form-label-group
-			input(type='', name='country', placeholder='Country', required)#Country.form-control
-			label(for='Country') Country
 		h3.h5.font-weight-normal Login
 		hr.mt-1.mb4
 		.form-label-group
@@ -58,4 +69,4 @@ block content
 		.form-label-group
 			input(type='password', name='password', placeholder='Password', required)#Password.form-control
 			label(for='Password') Password
-		button(type='submit').btn.btn-block.btn-primary.mt-5 Sign up
+		button(type='submit').btn.btn-block.btn-primary.mt-4 Sign up
