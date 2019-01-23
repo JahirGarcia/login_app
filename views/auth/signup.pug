@@ -24,9 +24,9 @@ block content
 		.form-group
 			select(name='age', required)#Age.form-control
 				option(value='-1') Select your age
-				- i = 0
+				- i = 1
 				while i < 99
-					option(value=i++)= i++
+					option(value=i)= i
 		.form-group
 			.custom-control.custom-radio.custom-control-inline
 				input(type='radio', name='genre', value='male', required)#GenreMale.custom-control-input
