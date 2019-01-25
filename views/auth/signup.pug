@@ -1,5 +1,8 @@
 extends ../layouts/app
 
+block custom_css
+	link(rel='stylesheet', href='/css/auth.css')
+
 block content
 	form(method='post', action='/auth/signup').form-auth
 		.text-center.mb-4
