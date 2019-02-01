@@ -1,7 +1,4 @@
-extends ../layouts/app
-
-block custom_css
-	link(rel='stylesheet', href='/css/auth.css')
+extends ../layouts/auth
 
 block content
 	form(method='post', action='/auth/signup').form-auth

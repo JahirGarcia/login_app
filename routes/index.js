@@ -7,4 +7,10 @@ router.get('/', (req, res, next) => {
 	});
 });
 
+router.get('/translate', (req, res, next) => {
+	res.render('translate', {
+		title: 'Translate'
+	});
+});
+
 module.exports = router;
