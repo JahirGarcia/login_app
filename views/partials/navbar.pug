@@ -3,9 +3,5 @@
   button(type="button", data-toggle="collapse", data-target="#NavbarNavWrapper").navbar-toggler: span.navbar-toggler-icon
   .collapse.navbar-collapse#NavbarNavWrapper
     ul.navbar-nav#NavbarNav
-      - var urls = ['home', 'translate'];
-      each url in urls
-        - var active = url != title? false : true;
-        -var urlTile = url.charAt(0).toUpperCase() + url.slice(1);
-        li(class=active).nav-item: a(href="/"+url).nav-link <i class="fas fa-home"></i> #{urlTitle}
-      <!--li.nav-item: a(href="/translate").nav-link <i class="fas fa-language"></i> Translate-->
+      li.nav-item: a(href="/").nav-link <i class="fas fa-home"></i> Home
+      li.nav-item: a(href="/translate").nav-link <i class="fas fa-language"></i> Translate
