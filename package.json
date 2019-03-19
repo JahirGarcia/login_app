@@ -1,7 +1,6 @@
 {
   "name": "login",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,5 +27,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JahirGarcia/login_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JahirGarcia/login_app/issues"
+  },
+  "homepage": "https://github.com/JahirGarcia/login_app#readme",
+  "description": ""
 }
