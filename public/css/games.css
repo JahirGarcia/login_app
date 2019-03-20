@@ -1,0 +1,42 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgba(142,45,226, .7), url('../img/games/bg.jpg');  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(74,0,224, .8), rgba(142,45,226, .7)), url('../img/games/bg.jpg');  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(74,0,224, .8), rgba(142,45,226, .7)), url('../img/games/bg.jpg'); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.logo {
+  height: 40px;
+  margin-top: 1.4rem;
+}
+
+.text-description {
+  letter-spacing: 2px;
+}
+
+.form-control {
+  background: transparent !important;
+  color: #fff;
+}
+
+.form-control::-webkit-input-placeholder { color: #fff; } 
+ 
+.form-control:-moz-placeholder { /* Firefox 18- */ color: #fff; } 
+ 
+.form-control::-moz-placeholder { /* Firefox 19+ */ color: #fff; } 
+ 
+.form-control:-ms-input-placeholder { color: #fff; }
+
+a > .fab {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 10px;
+}

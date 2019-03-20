@@ -20,6 +20,7 @@ auth();
 
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
+const landingRouter = require('./routes/landing');
 
 // database connection
 mongoose.connect(process.env.MLAB_URI).then(() =>{
@@ -65,6 +66,7 @@ app.use((req, res, next) => {
 	}
 });
 app.use('/', indexRouter);
+app.use('/landing', landingRouter);
 
 // 404 error
 app.use((req, res, next) => {
@@ -73,7 +75,11 @@ app.use((req, res, next) => {
 
 // error handler
 app.use((err, req, res, next) => {
-	res.status(500).json(err);
+	res.status(err.status || 500);
+	res.render('error', {
+		title: err.message,
+		error: err,
+	});
 });
 
 // start server

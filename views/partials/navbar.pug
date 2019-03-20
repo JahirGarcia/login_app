@@ -4,3 +4,7 @@
   .collapse.navbar-collapse#NavbarNavWrapper
     ul.navbar-nav#NavbarNav
       li.nav-item: a(href="/").nav-link <i class="fas fa-home"></i> Home
+      li.nav-item.dropdown
+        a(href="#", data-toggle="dropdown", data-target="LandingDropdown").nav-link.dropdown-toggle <i class="fas fa-laptop"></i> Landing Page
+        ul#LandingDropdown.dropdown-menu
+          a(href="/landing/games").dropdown-item Games

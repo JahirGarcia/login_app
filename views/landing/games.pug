@@ -1,0 +1,28 @@
+extends ../layouts/app
+
+block custom_style
+  link(rel="stylesheet", href="/css/games.css")
+
+block content
+  header.container
+    .row
+      .col-md-12.my-4
+        a(href="#")
+          img(src="/img/games/logo.png", alt="Fazt Logo").logo
+        h1.text-uppercase.display-4.font-weight-bold.text-center Landing Page
+      .col-md-6
+        img(src="/img/games/right-laptop.png", alt="Laptop Gaming").img-fluid
+      .col-md-6.text-center.mt-4
+        p.text-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quam error expedita cum nulla?
+        form(action="#")
+          input(type="text", name="", placeholder="Enter your email").form-control.my-4.text-center
+          button(type="submit").btn.btn-light.text-uppercase Subscribe
+        ul.list-unstyle.list-inline.mt-4
+          li.list-inline-item
+            a(href="#") <i class="fab fa-facebook"></i>
+          li.list-inline-item
+            a(href="#") <i class="fab fa-instagram"></i>
+          li.list-inline-item
+            a(href="#") <i class="fab fa-twitter"></i>
+          li.list-inline-item
+            a(href="#") <i class="fab fa-youtube"></i>
