@@ -2,4 +2,24 @@ extends layouts/app
 
 block content
 	include partials/navbar
-	h1=title
+	div(data-ride="carousel")#Carousel.carousel.slide
+		ol.carousel-indicators
+			li(data-target="#Carousel", data-slide-to="0").active
+			li(data-target="#Carousel", data-slide-to="1")
+			li(data-target="#Carousel", data-slide-to="2")
+		.carousel-inner
+			.carousel-item.active
+				.overlay-img
+					img(src="/img/0r7qN8U.jpg", alt="").d-block.w-100
+			.carousel-item
+				.overlay-img
+					img(src="/img/zl8K2Hy.png", alt="").d-block.w-100
+			.carousel-item
+				.overlay-img
+					img(src="/img/172546.jpg", alt="").d-block.w-100
+		a(href="#Carousel", data-slide="prev").carousel-control-prev
+			span.carousel-control-prev-icon
+			span.sr-only Previus
+		a(href="#Carousel", data-slide="next").carousel-control-next
+			span.carousel-control-next-icon
+			span.sr-only Next

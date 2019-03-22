@@ -1,3 +1,29 @@
-.bg-dark {
+#Navbar {
   background-color: #24292e !important;
+}
+
+@media (min-width: 768px) {
+  #Navbar {
+    background-color: transparent !important;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+  }
+}
+
+.overlay-img::before {
+  content: "";
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(36,59,85, .5), rgba(20,30,48, .4));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(36,59,85, .5), rgba(20,30,48, .4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.overlay-img {
+  position: relative;
+  display: inline-block;
 }
